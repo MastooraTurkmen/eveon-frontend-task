@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { useUIStore } from "../store/useStore";
 import { cards } from "../data/cards";
 import { useTranslation } from "react-i18next";
-import { useEffect } from "react";
 
 type Card = {
   id: number;
@@ -17,21 +16,21 @@ type Card = {
 export default function CardGrid() {
   const language = useUIStore((state) => state.language);
   const theme = useUIStore((state) => state.theme);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <section
       id="services"
       className={`px-6 py-12 ${
         theme === "dark" ? "bg-zinc-900" : "bg-gray-50"
-      } ${
-        language === "ar" ? "text-right" : "text-left"
-      }`}
+      } ${language === "ar" ? "text-right" : "text-left"}`}
     >
       <div className="max-w-7xl mx-auto">
-        <h2 className={`text-3xl font-bold mb-8 text-center ${
-          theme === "dark" ? "text-white" : "text-gray-900"
-        }`}>
+        <h2
+          className={`text-3xl font-bold mb-8 text-center ${
+            theme === "dark" ? "text-white" : "text-gray-900"
+          }`}
+        >
           {t("featuresTitle")}
         </h2>
 
@@ -55,14 +54,18 @@ export default function CardGrid() {
                 />
               </div>
               <div className="p-6 flex flex-col h-full">
-                <h3 className={`text-xl font-semibold mb-2 ${
-                  theme === "dark" ? "text-white" : "text-gray-900"
-                }`}>
+                <h3
+                  className={`text-xl font-semibold mb-2 ${
+                    theme === "dark" ? "text-white" : "text-gray-900"
+                  }`}
+                >
                   {t(`cards.${id}.title`)}
                 </h3>
-                <p className={`text-sm mb-4 ${
-                  theme === "dark" ? "text-zinc-300" : "text-gray-600"
-                }`}>
+                <p
+                  className={`text-sm mb-4 ${
+                    theme === "dark" ? "text-zinc-300" : "text-gray-600"
+                  }`}
+                >
                   {t(`cards.${id}.description`)}
                 </p>
                 <button className="px-6 mt-6 py-3 cursor-pointer text-white bg-blue-600 hover:bg-blue-700 transition rounded-lg font-medium">
