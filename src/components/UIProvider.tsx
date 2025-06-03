@@ -1,19 +1,17 @@
 "use client";
-
 import { useEffect } from "react";
 import { useUIStore } from "../store/useStore";
 
 export function UIProvider({ children }: { children: React.ReactNode }) {
-  const isDarkMode = useUIStore((state) => state.isDarkMode);
-  const isRTL = useUIStore((state) => state.isRTL);
+  const { language, isRTL } = useUIStore();
 
+  // Handle RTL changes
   useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [isDarkMode]);
+    const root = document.documentElement;
 
-  return <div dir={isRTL ? "rtl" : "ltr"}>{children}</div>;
+    root.setAttribute("dir", isRTL ? "rtl" : "ltr");
+    root.setAttribute("lang", language);
+  }, [isRTL, language]);
+
+  return <>{children}</>;
 }
