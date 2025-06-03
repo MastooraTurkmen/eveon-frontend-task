@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Eveon Frontend Challenge
 
-## Getting Started
+## 🔧 Features
 
-First, run the development server:
+- Light/Dark Mode Toggle
+- RTL Layout Support
+- English and Arabic Langue
+- Responsive Card Grid
+- Accessible & Semantic HTML
+- Smooth Animations (Framer Motion)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Live Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[Add your Vercel/Netlify live link here]
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📂 Folder Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+├── public/ # Static assets like images and icons
+├── src/
+│ ├── app/ # contains layout, page, and providers
+│ ├── components/ # Reusable UI components (About, Hero, RTLToggle, ThemeToggle etc.)
+│ ├── data/ # Cards data, footer and social links
+│ ├── lib/ # Translation
+│ └── store/ # use Store
+├── next.config.js # Next.js configuration
+├── package.json # Project metadata and dependencies
+└── README.md
 
-## Learn More
+## 💬 Why this Task Interested Me
 
-To learn more about Next.js, take a look at the following resources:
+This task interested me because it combined several of my favorite aspects of frontend development—responsive design, multilingual support (including RTL layouts), and dark/light theming. I was especially drawn to the challenge of creating a user-friendly experience for both Arabic and English users.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 💡 What I Focused On
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+In my solution, I focused on clean, reusable components, smooth animations with Framer Motion, and ensuring seamless theme and RTL toggling. I also paid close attention to layout structure and visual consistency across screen sizes.
