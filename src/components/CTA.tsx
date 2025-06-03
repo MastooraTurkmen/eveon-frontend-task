@@ -19,22 +19,24 @@ const CTA = () => {
     <section
       id="contact"
       className={`py-20 px-6 shadow-inner ${
-        theme === "dark" 
-          ? "bg-gradient-to-b from-zinc-900 to-blue-900" 
+        theme === "dark"
+          ? "bg-gradient-to-b from-zinc-900 to-blue-900"
           : "bg-gradient-to-b from-gray-50 to-blue-100"
-      } ${
-        language === "ar" ? "text-right" : "text-center"
-      }`}
+      } ${language === "ar" ? "text-right" : "text-center"}`}
     >
       <div className="max-w-3xl mx-auto">
-        <h2 className={`text-3xl sm:text-4xl font-bold mb-4 ${
-          theme === "dark" ? "text-white" : "text-gray-900"
-        }`}>
+        <h2
+          className={`text-3xl sm:text-4xl font-bold mb-4 ${
+            theme === "dark" ? "text-white" : "text-gray-900"
+          }`}
+        >
           {t("cta.title")}
         </h2>
-        <p className={`text-lg mb-8 ${
-          theme === "dark" ? "text-gray-300" : "text-gray-600"
-        }`}>
+        <p
+          className={`text-lg mb-8 ${
+            theme === "dark" ? "text-gray-300" : "text-gray-600"
+          }`}
+        >
           {t("cta.description")}
         </p>
         <div
@@ -43,7 +45,7 @@ const CTA = () => {
           }`}
         >
           <Link
-            href="/contact"
+            href="#"
             className={`font-semibold px-6 py-3 rounded-md transition ${
               theme === "dark"
                 ? "bg-white text-blue-900 hover:bg-gray-100"
@@ -53,7 +55,7 @@ const CTA = () => {
             {t("cta.contactButton")}
           </Link>
           <Link
-            href="/services"
+            href="#"
             className={`border font-semibold px-6 py-3 rounded-md transition ${
               theme === "dark"
                 ? "border-white text-white hover:bg-white hover:text-blue-900"
