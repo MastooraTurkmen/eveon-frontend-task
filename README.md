@@ -11,7 +11,7 @@
 
 ## 🚀 Live Demo
 
-[Add your Vercel/Netlify live link here]
+[Eveon Frontend Task](https://eveon-frontend-task.netlify.app/)
 
 ## 📂 Folder Structure
 
